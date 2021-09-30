@@ -1,0 +1,12 @@
+---
+ - hosts: localhost
+   tasks:
+     - ec2:
+        region: us-east-2
+        key_name: Priyadarsini
+        instance_type: t2.micro
+        image: ami-099889487036016b0
+        wait: yes
+        count: 1
+        vpc_subnet_id: subnet-b44675f8
+        assign_public_ip: yes
